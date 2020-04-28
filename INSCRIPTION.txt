@@ -1,0 +1,7 @@
+Check si user existe pas déjà avant inscrire
+mettre 2 fois meme mdp et check si le meme
+
+password_hash(mdp,PASSWORD_DEFAUTLT);
+
+Login : 
+password_verify(mdpEntréParUSer,mdpStockéDB);

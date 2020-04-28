@@ -1,0 +1,29 @@
+- Fonctions à rajouter : 
+	- interface user loggué ( proposer un film , des acteurs , des réalisateurs, ... ...)
+	- interface user admin ( ajotuer des films , valider ceux proposés, ...)
+	- recherche ( https://www.commentcamarche.net/contents/801-php-creer-un-moteur-de-recherche )
+	- menu déroulant en haut "Administratif" pour se connecter ou s'inscrire
+	- Si j'ai le temps : commentaires ( si pas le temps SUPPRIMER EN HTML ET CSS )
+
+REQUETE SQL UNIFIEES !!!!!!
+
+
+- dans db pas d'entrées pour : 
+
+	- DAISY ridely , john boyega , 
+	- michael j-fox , ...
+	- mattiew mc connaughy
+	- ready player one acteurs ?
+
+
+- css trop chargé
+
+- filmograpgie mettre nouveaux acteurs : 
+	- sw9
+	-interstellar
+	- retour vers le futur 1 ,2 ,3
+	- gardiens galaxie 1
+	- ready player one
+
+
+(- retirer barre défilement horizontale slider miniatures : https://www.journaldunet.fr/web-tech/developpement/1202721-comment-masquer-une-barre-de-defilement-sans-empecher-de-scroller/ )
