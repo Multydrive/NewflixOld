@@ -1,16 +1,17 @@
-- Fonctions à rajouter : 
+- Fonctions à rajouter :
 	- interface user loggué ( proposer un film , des acteurs , des réalisateurs, ... ...)
 	- interface user admin ( ajotuer des films , valider ceux proposés, ...)
 	- recherche ( https://www.commentcamarche.net/contents/801-php-creer-un-moteur-de-recherche )
 	- menu déroulant en haut "Administratif" pour se connecter ou s'inscrire
+	- isncritpion : COMPARER LES 2 mdp entrés et reremplir tout le formulaire si erreur mdp ou email ( mettre champ email en rouge)
 	- Si j'ai le temps : commentaires ( si pas le temps SUPPRIMER EN HTML ET CSS )
 
 REQUETE SQL UNIFIEES !!!!!!
 
 
-- dans db pas d'entrées pour : 
+- dans db pas d'entrées pour :
 
-	- DAISY ridely , john boyega , 
+	- DAISY ridely , john boyega ,
 	- michael j-fox , ...
 	- mattiew mc connaughy
 	- ready player one acteurs ?
@@ -18,7 +19,7 @@ REQUETE SQL UNIFIEES !!!!!!
 
 - css trop chargé
 
-- filmograpgie mettre nouveaux acteurs : 
+- filmograpgie mettre nouveaux acteurs :
 	- sw9
 	-interstellar
 	- retour vers le futur 1 ,2 ,3
