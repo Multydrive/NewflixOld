@@ -20,7 +20,7 @@
             $titre = $_GET['Titre'];
             if ($titre=="")
             {
-                $req=$bd->prepare ("SELECT * FROM `films` ");
+                $req=$bd->prepare ("SELECT * FROM `films` ORDER BY `films`.`DateAjout` DESC ");
             }
             else
             {
@@ -28,7 +28,7 @@
             }
             $req->execute();
 
-            echo '<div id="acteur" width:320px >';
+            echo '<div id="Recherche" width:320px >';
             while ($result=$req->fetch(PDO::FETCH_OBJ) )
             {
                 echo
