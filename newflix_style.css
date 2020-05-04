@@ -136,7 +136,7 @@ label {
 }
 input, textarea {
   background-color: transparent;
-  color: white;
+  color: black;
   /* Pour s'assurer que tous les champs texte ont la même police. */
   font: 1em Helvetica Neu Bold;
 

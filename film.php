@@ -75,7 +75,7 @@
 						$req->execute(array('id' => $_GET['id']));
 							while ($result=$req->fetch(PDO::FETCH_OBJ) )
 							{
-								echo '<a href="acteurs_infos.php?id='.$result->Id_Acteur.' ">'.$result->Prenom." ".$result->Nom.' ,</a> ' ;
+								echo '<a href="acteurs_infos.php?id='.$result->Id_Acteur.' ">'.$result->Prenom." ".$result->Nom.',</a> ' ;
 							}
 
 						$req->closeCursor();
@@ -132,17 +132,10 @@
 			// Ferme acollade du while principal et le traitement de la requête
 			}
 			$req->closeCursor();
+			require_once('footer.php');
 		?>
 
-		<footer id = "Footer">
-			<nav id="navbot">
-			<a href="index.php">Accueil</a>
-			<a href="genres.php">Genres</a>
-			<a href="acteurs.php"> Acteurs </a>
-			<a href="login.php">Se connecter</a>
-            <a href="inscription.php">Inscription</a>
-			</nav>
-		</footer>
+
 
 	</body>
 
