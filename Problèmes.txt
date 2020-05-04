@@ -1,9 +1,13 @@
 - Fonctions à rajouter :
 	- interface user loggué ( proposer un film , des acteurs , des réalisateurs, ... ...)
 	- interface user admin ( ajotuer des films , valider ceux proposés, ...)
-	- recherche ( https://www.commentcamarche.net/contents/801-php-creer-un-moteur-de-recherche )
 	- menu déroulant en haut "Administratif" pour se connecter ou s'inscrire
 	- isncritpion : COMPARER LES 2 mdp entrés et reremplir tout le formulaire si erreur mdp ou email ( mettre champ email en rouge)
+	- page acteurs améliorer QUAND NOM ET PRENOM SUR DEUX LIGNES ET QUE SURVOLE IMAGE REPASSE SUR UNE LIGNE
+
+	- AJOUT DE FILMS PAS METTRE LES DEUX POINTS COLLE DANS TITRE, SINON RECHERCHE MARCHE PAS
+
+	- si ai le temps : mettre section dans un film : film similaire
 	- Si j'ai le temps : commentaires ( si pas le temps SUPPRIMER EN HTML ET CSS )
 
 REQUETE SQL UNIFIEES !!!!!!

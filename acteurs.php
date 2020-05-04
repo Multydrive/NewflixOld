@@ -2,53 +2,44 @@
 
 <html lang = "fr">
 	<head>
-            <?php 
+            <?php
                require_once('head.php');
             ?>
     </head>
 
     <body>
 
-           <?php 
+           <?php
                require_once('connexion.php');
                require_once('menu.php');
             ?>
 
-      
-		
 		<section class= "Films_global">
-			
-			<?php 
-                    $req=$bd->prepare ("SELECT * FROM acteurs "); 
-                    $req->execute();
 
-                    echo '<div id="acteur" width:120px >';
-                    while ($result=$req->fetch(PDO::FETCH_OBJ) ) 
-                    {
+			<?php
+          $req=$bd->prepare ("SELECT * FROM acteurs ");
+          $req->execute();
 
-                            $req2=$bd->prepare ("SELECT * 
-                                                FROM acteurs" );
-                            $req2->execute();
-                            
-                                echo 
-                                '<div class="photoActeur">
-                                    <div><span>'.$result->Nom." ".$result->Prenom.'</span> </div>
-                                    <div> <a href="acteurs_infos.php?id='.$result->Id_Acteur .' "><img src="'.$result->Photo.'"width="120px" 
-                                    height="160px" alt=" '.$result->Nom." ".$result->Prenom.' " title="'.$result->Nom." ".$result->Prenom.'" /> </a> </div>
-                                 </div>' ;
+          echo '<div id="acteur" width:120px >';
+          while ($result=$req->fetch(PDO::FETCH_OBJ) )
+          {
+                      echo
+                      '<div class="photoActeur">
+                          <div><span>'.$result->Prenom." ".$result->Nom.'</span> </div>
+                          <div> <a href="acteurs_infos.php?id='.$result->Id_Acteur .' "><img src="'.$result->Photo.' "width="120px"
+                          height="160px" alt=" '.$result->Prenom." ".$result->Nom.' " title="'.$result->Prenom." ".$result->Nom.'" /> </a> </div>
+                       </div>' ;
+          }
 
-                    }
-
-                    echo '</div>';
-                    $req->closeCursor();   
-                    $req2->closeCursor();                           
-                 ?>
+          echo '</div>';
+          $req->closeCursor();
+    	?>
 
 		</section>
 
-		<?php 
-            require_once('footer.php');
-        ?>
-        
+		<?php
+        require_once('footer.php');
+    ?>
+
 	</body>
-</html>	
+</html>

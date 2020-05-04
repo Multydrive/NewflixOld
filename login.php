@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang = "fr">
 	<head>
-			<?php 
+			<?php
                require_once('head.php');
             ?>
 	</head>
 
 	<body>
 
-        <?php 
+        <?php
             require_once('connexion.php');
         ?>
-		
-		<nav id="navtop">	
+
+		<nav id="navtop">
 			<a href="index.php"><img class="logo" src = "img/Logo_Newflix.png" alt = "Logo officiel du site"></a>
-            
-			<a href="login.php" class="login" >Connexion</a>    
-            <a href="inscription.php">Inscription</a>	
+
+			<a href="login.php" class="login" >Connexion</a>
+            <a href="inscription.php">Inscription</a>
 		</nav>
 
 		<div id="txtOk" height="120px"></div>
 
-	<?php	
+	<?php
 		session_start();
 
 		if (isset($_POST['username'])){
 			$username = stripslashes($_REQUEST['username']);
-			$username = mysqli_real_escape_string($conn, $username);
+			$username = mysqli_real_escape_string($bd, $username);
 			$_SESSION['username'] = $username;
 			$password = stripslashes($_REQUEST['password']);
 			$password = mysqli_real_escape_string($conn, $password);
-		    $query = "SELECT * FROM `users` WHERE username='$username' and password='".hash('sha256', $password)."'";
+		  $query = "SELECT * FROM `users` WHERE username='$username' and password='".hash('sha256', $password)."'";
 			$result = mysqli_query($conn,$query) or die(mysql_error());
-			
+
 			if (mysqli_num_rows($result) == 1) {
 				$user = mysqli_fetch_assoc($result);
 				// vérifier si l'utilisateur est un administrateur ou un utilisateur
 				if ($user['type'] == 'admin') {
-					header('location: admin/home.php');		  
+					header('location: admin/home.php');
 				}else{
 					header('location: index.php');
 				}
@@ -55,9 +55,9 @@
 		<?php if (! empty($message)) { ?>
 		    <p class="errorMessage"><?php echo $message; ?></p>
 	<?php } ?>
-		
-		
 
-		
+
+
+
 	</body>
-</html>	
+</html>
