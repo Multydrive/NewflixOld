@@ -82,6 +82,8 @@
 			}
 			$req->closeCursor();
 			require_once('footer.php');
+			echo '<script src="jquery-3.4.1.min.js"> </script>
+						<script src="newflix.js"></script>' ;
 		?>
 
 

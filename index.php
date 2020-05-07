@@ -13,9 +13,8 @@
            require_once('connexion.php');
            require_once('menu.php');
         ?>
-
+				
         <!-- Slider -->
-
         <div class="container">
 
 	        <input type="radio" id="i1" name="images" checked/>
@@ -128,20 +127,10 @@
 
         <?php
             require_once('footer.php');
+						echo '<script src="jquery-3.4.1.min.js"> </script>
+									<script src="newflix.js"></script>' ;
         ?>
 
-        <script type="text/javascript">
-            onload  = start;
-
-            function start(){
-                var i = 1;
-                function Move(){
-                    i = (i%4)+1; // car il y a 4 images dans le slider
-                    document.getElementById('i'+i).checked = true;
-                }
-                setInterval(Move,7500); //change img toutes les 7,5 sec
-            }
-        </script>
 
 	</body>
 </html>

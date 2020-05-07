@@ -32,10 +32,10 @@ src: url('fonts/Helvetica Neu Bold.ttf');
 .search { padding: 10px;}
 #FormRecherche { max-width: 30%; margin-right: 0; width: auto;}
 #DivRecherche {display: inline;}
-#marecherche {width: 250px;}
+#maRecherche {width: 250px; color: white;}
 
 /* Footer */
-#navbot {  z-index:95; background-color:#111; display:flex; flex-flow:row wrap; justify-content:center; text-align: center;}
+#navbot { z-index:95; background-color:#111; display:flex; flex-flow:row wrap; justify-content:center; text-align: center;}
 #navbot span{ font-family:Bebasneue,Calibri,sans-serif; text-decoration:none; padding:0.5em; font-size:20px;  background-color: #111; width: 100%;}
 
 /* Titres */
@@ -86,8 +86,6 @@ div h3 {margin-top: 5px; text-align: center; }
 #acteur span {order: 0; display: block; position:relative; top:0px; text-align: center; padding: 10px; font-size: 15px; }
 #acteur img {order: 1; }
 .photoActeur {padding: 1%;}
-
-/* p */
 #Acteurs {min-width: 170px; }
 
 /* Amélioration du responsive*/
@@ -115,6 +113,10 @@ section .flex { justify-content: center;}
 ul {margin-left: 0;}
 }
 
+/* Flèche back to top */
+#fleche_haut { min-width: inherit; position: fixed; bottom: 20px; right: 20px; padding: 5px; transition-property: background-color; transition-duration: 400ms; background-color: transparent; z-index: 999; width: 50px; height: 50px;}
+#fleche_haut:hover {background-color: #080808 ;}
+
 /* Scrollbar personnalisée */
 ::-webkit-scrollbar { width: 11px;height: 7px;}
 ::-webkit-scrollbar-track {border-radius: 3px;}
@@ -136,7 +138,7 @@ label {
 }
 input, textarea {
   background-color: transparent;
-  color: black;
+
   /* Pour s'assurer que tous les champs texte ont la même police. */
   font: 1em Helvetica Neu Bold;
 
@@ -298,6 +300,7 @@ h1.box-title {
 .box-register {text-align:center;margin-bottom:0px;}
 .box-register a {text-decoration:none; font-size:12px; color:#666;}
 .box-input {
+  color: black;
   font-size: 14px;
   background: #fff;
   border: 1px solid #ddd;

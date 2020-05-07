@@ -18,6 +18,9 @@ echo '  <nav id="navtop">
 
         <div id="txtOk">
 
-        </div>' ;
+        </div>
+
+				<!-- Back to top -->
+				<img id="fleche_haut" src="img/arrow_top.png" class="disparition arrow" alt="flèche pour remonter en haut de la page" width="30px" height="30px"> ' ;
 
 ?>
