@@ -9,7 +9,7 @@
 	<body>
 
    	<?php
-       require_once('connexion.php');
+       require_once('connexion_user_lambda.php');
     ?>
 
     <nav id="navtop">
@@ -22,6 +22,7 @@
 
 		<?php
 
+		$isPasswordCorrect = false;
 		$checkMail = false ;
 
 		if (isset($_REQUEST['email'], $_REQUEST['password']))
@@ -112,7 +113,7 @@
 			  placeholder="Email" value="<?php if (isset($email)) {echo $email ;} ?>"required />
 
 			    <input type="password" class="box-input" name="password"
-			  placeholder="Mot de passe" value="<?php if (isset($mdp)) {echo $mdp ;} ?>" required />
+			  placeholder="Mot de passe"  required />
 
 			    <input type="submit" name="submit"
 			  value="Se connecter" class="box-button" />

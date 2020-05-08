@@ -2,9 +2,13 @@
 	- interface user loggué ( proposer un film , des acteurs , des réalisateurs, ... ...)
 	- interface user admin ( ajotuer des films , valider ceux proposés, ...)
 	- isncritpion : reremplir tout le formulaire si erreur  ( mettre champ email en rouge) FORMULAIRE DOIT S'APPELER LUI MEME
-	- FLECHE BACK TO TOP DANS ACTEURS MARCHE PAS
+	- communication avec administrateur ?
+	- notification pour admin que films ajouté pour que puisse ajouter une photo
+	- FLECHE BACK TO TOP DANS ACTEURS MARCHE PAS ( copié/collé dans acteurs dans profil meme chose )
 	- page acteurs améliorer QUAND NOM ET PRENOM SUR DEUX LIGNES ET QUE SURVOLE IMAGE REPASSE SUR UNE LIGNE
 	- REQUETE SQL UNIFIEES !!!!!!
+	- METTRE UN MDP A ROOT POUR LA DB !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 - Bug :
 	- AJOUT DE FILMS PAS METTRE LES DEUX POINTS COLLE AVEC LE TITRE, SINON RECHERCHE MARCHE PAS

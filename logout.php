@@ -9,7 +9,7 @@
 	<body>
 
    	<?php
-       require_once('connexion.php');
+       require_once('connexion_user_lambda.php');
        session_start();
     ?>
 

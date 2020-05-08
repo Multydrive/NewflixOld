@@ -17,11 +17,19 @@ if (isset($_SESSION['pseudo']) )
 
 	<body>
 
-		   <?php
-		   		// Connexion à la base de données et menu du site
-               require_once('connexion.php');
-               require_once('menu.php');
-            ?>
+    <?php
+       // Connexion à la base de données et menu du site
+       if ($_SESSION['pseudo']=='admin@heh.be')
+       {
+         require_once('connexion.php');
+       }
+       else
+       {
+         require_once('connexion_user_lambda.php');
+       }
+
+       require_once('menu.php');
+    ?>
 
 		<div id = "txtOk"> </div>
 

@@ -17,9 +17,18 @@ if (isset($_SESSION['pseudo']) )
     <body>
 
       <?php
-         require_once('connexion.php');
+         // Connexion à la base de données et menu du site
+         if ($_SESSION['pseudo']=='admin@heh.be')
+         {
+           require_once('connexion.php');
+         }
+         else
+         {
+           require_once('connexion_user_lambda.php');
+         }
+
          require_once('menu.php');
-       ?>
+      ?>
 
 		   <section class= "Films_global" id="Recherche">
 
