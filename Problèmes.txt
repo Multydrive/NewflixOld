@@ -1,6 +1,8 @@
 - Fonctions à rajouter :
-	- interface user loggué ( proposer un film , des acteurs , des réalisateurs, ... ...)
-	- interface user admin ( ajotuer des films , valider ceux proposés, ...)
+	- modif mdp , suppression compte ... FAIRE DES FONCTIONS POUR GET MDP, MAIL, ...
+	- REFAIRE TABLEAU DE BORD MON COMPTE ( voir notes papiers )
+			- interface user loggué ( ajouter un film , des acteurs , des réalisateurs, ... ...)
+			- interface user admin ( ajotuer des films , voir ceux proposés et les annuler si convient pas , ...)
 	- isncritpion : reremplir tout le formulaire si erreur  ( mettre champ email en rouge) FORMULAIRE DOIT S'APPELER LUI MEME
 	- communication avec administrateur ?
 	- notification pour admin que films ajouté pour que puisse ajouter une photo
@@ -9,7 +11,7 @@
 	- REQUETE SQL UNIFIEES !!!!!!
 	- METTRE UN MDP A ROOT POUR LA DB !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	- check si peut accéder sans session :
-		- plante si tente acccéder actuers_infos sans id acteur 
+		- plante si tente acccéder actuers_infos sans id acteur
 
 
 - Bug :

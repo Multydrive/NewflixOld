@@ -40,7 +40,7 @@ if (isset($_SESSION['pseudo']) )
 
 
 	        <div class="slide_img" id="one">
-              <a href="film.php?id=10"> <img src="img/Avengers1_Affiche.png"></a>
+              <a href="film.php?id=11"> <img src="img/Avengers2_Affiche.png"></a>
               <label class="prev" for="i4"><span></span></label>
               <label class="next" for="i2"><span></span></label>
 	          </div>
