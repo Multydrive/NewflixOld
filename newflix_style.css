@@ -8,7 +8,7 @@ a:active { color:#ff0; }
 img, video, iframe { max-width:100%; min-width : 130px; max-height: 100% }
 p { font-family:Helvetica Neu Bold,Arial,sans-serif; color: white; margin-top: 0; font-size: 15px;}
 div figcaption {text-align: center;font-family:Helvetica Neu Bold, Calibri,Arial,sans-serif; color:#922; font-size: .875rem; }
-form p {font-family: Calibri,Arial,sans-serif; color: white; display: flex;}
+form p {font-family: Calibri,Arial,sans-serif; color: white; }
 #txtOk {margin-top: 72.531px;}
 .login {text-align: right; margin-left: auto;}
 
@@ -21,9 +21,10 @@ src: url('fonts/Helvetica Neu Bold.ttf');
 /* Navigation */
 #navtop { position:fixed; top:0; left:0; right:0; z-index:99; background-color:#111; display:flex; flex-flow:row wrap; justify-content:flex-start; align-items: center;}
 #navtop a { color:white; font-family:Helvetica Neu Bold,Calibri,sans-serif; text-decoration:none; padding:0.6em; display:inline-block; font-size:20px;  }
-#navtop a:hover, #navtop a:focus {  color:red; background-color: black; transition-property: background-color ; background-color:#545458 ; transition-duration: 400ms;}
+#navtop a:hover, #navtop a:focus { border-radius: 45px; color:red; background-color: black; transition-property: background-color ; background-color:#545458 ; transition-duration: 400ms;}
 #navtop a:active { color:#ffd;}
 #navtop img,#navbot img {min-width: 32px;}
+#navbot a:hover img, #navbot a:focus img {border-radius: 0px;}
 .logo {min-width:30px ; width:150px; }
 
 /* Formulaire de recherche  */
@@ -95,13 +96,14 @@ div h3 {margin-top: 5px; text-align: center; }
 .images img {margin-top:0;}
 .login {margin : auto ;}
 #txtOk {margin-top: 128.7px;}
+#FormRecherche { margin: auto; }
+#maRecherche {width:99%;}
 }
 
 @media screen and (max-width:700px) {
 .Infos {flex-flow:row wrap; margin-left: 0;}
 .Infos p{ margin-top: 25px;}
-#FormRecherche { margin: auto; width: 60%; max-width: 100%;}
-#txtOk {margin-top: 128.7px;}
+#txtOk {margin: 0px;}
 }
 
 @media screen and (max-width:360px) {
@@ -297,8 +299,9 @@ h1.box-title {
   border: 0;
   outline:0;
 }
-.box-register {text-align:center;margin-bottom:0px;}
-.box-register a {text-decoration:none; font-size:12px; color:#666;}
+.box-register {text-align:center;margin-bottom:0px; color:#666; padding-top: 15px;}
+.box-register a {text-decoration:none; }
+.box-register a:hover, a:focus, a:active {color: red;}
 .box-input {
   color: black;
   font-size: 14px;

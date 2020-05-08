@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['pseudo']) )
+ {
+
+
+ ?>
 <!DOCTYPE html>
 
 <html lang = "fr">
@@ -13,7 +20,7 @@
            require_once('connexion.php');
            require_once('menu.php');
         ?>
-				
+
         <!-- Slider -->
         <div class="container">
 
@@ -128,7 +135,30 @@
         <?php
             require_once('footer.php');
 						echo '<script src="jquery-3.4.1.min.js"> </script>
-									<script src="newflix.js"></script>' ;
+									<script src="newflix.js"></script>
+
+									<script>
+									onload  = start;
+
+									function start()
+									{
+									    var i = 1;
+									    function Move()
+									    {
+									        i = (i%4)+1; // car 4 images dans le slider
+									        document.getElementById("i"+i).checked = true;
+									    }
+									    setInterval(Move,7500); //change img toutes les 7,5 sec
+									}
+									</script> ' ;
+
+
+					}
+					else
+					{
+						header('Location:login.php');
+					}
+
         ?>
 
 

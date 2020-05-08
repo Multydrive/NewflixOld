@@ -1,16 +1,3 @@
-onload  = start;
-
-function start()
-{
-    var i = 1;
-    function Move()
-    {
-        i = (i%4)+1; // car 4 images dans le slider
-        document.getElementById('i'+i).checked = true;
-    }
-    setInterval(Move,7500); //change img toutes les 7,5 sec
-}
-
 // flèche
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px

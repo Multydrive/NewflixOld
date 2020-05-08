@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['pseudo']) )
+ {
+
+
+ ?>
 <!DOCTYPE html>
 
 <html lang = "fr">
@@ -39,6 +46,11 @@
 
 		<?php
         require_once('footer.php');
+			}
+			else
+			{
+				header('Location:login.php');
+			}
     ?>
 
 	</body>
