@@ -36,7 +36,6 @@
         return $donnees;
 			}
 
-
 			// récupérer l'email et appeller la fct valid_donneese
  		  $email = valid_donnees ($_REQUEST['email']);
 			// On récupère le mail et le mdp dans la DB
@@ -62,8 +61,6 @@
 			{
 				$isPasswordCorrect = password_verify($mdp, $mdp_DB);
 			}
-
-
 
 			//Connexion si le mail est présent en DB , si le hash du mdp de passe est le meme et si lex deux champs ne sont pas vides
 			if ($checkMail == true and $isPasswordCorrect == true and !empty($email) and !empty($mdp)  )
@@ -103,9 +100,6 @@
 		else
 		{
 		?>
-
-
-
 				<form class="box" action="" method="post">
 			    <h1 class="box-title">Se connecter</h1>
 
@@ -124,6 +118,16 @@
 
 	<?php
 		}
+		if (isset($_GET['supprimer']))
+		{
+			if ($_GET['supprimer'] == 1)
+			{
+				echo "<div class='sucess'>
+								 <h2>Compte supprimé avec succès !</h2>
+						 </div>";
+			}
+		}
+
 		require_once('footer.php');
 	?>
 

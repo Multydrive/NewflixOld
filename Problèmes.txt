@@ -8,6 +8,8 @@
 	- page acteurs améliorer QUAND NOM ET PRENOM SUR DEUX LIGNES ET QUE SURVOLE IMAGE REPASSE SUR UNE LIGNE
 	- REQUETE SQL UNIFIEES !!!!!!
 	- METTRE UN MDP A ROOT POUR LA DB !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	- check si peut accéder sans session :
+		- plante si tente acccéder actuers_infos sans id acteur 
 
 
 - Bug :
@@ -15,8 +17,8 @@
 
 - SI J'AI LE TEMPS :
 		- mettre section dans un film : film similaire
-		- Si j'ai le temps : commentaires ( si pas le temps SUPPRIMER EN HTML ET CSS )
 		- photos des acteurs avec leur nom sous les films ?
+		- champ commentaires sous les films  ( si pas le temps SUPPRIMER EN HTML ET CSS )
 
 
 - dans db pas d'entrées pour :
