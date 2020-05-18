@@ -1,10 +1,17 @@
 // flèche
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $("#fleche_haut").fadeIn(200);    // Fade in the arrow
-    } else {
-        $("#fleche_haut").fadeOut(200);   // Else fade out the arrow
-    }
+$(document).ready(function()
+{
+  $(window).scroll(function() {
+      if ($(this).scrollTop() >= 50) {
+          console.log("scroll");
+          $("#fleche_haut").fadeIn(200);
+      } else {
+          console.log("PETIT scroll");
+          $("#fleche_haut").fadeOut(200);
+      }
+  });
+
+  console.log("pas de scroll");
 });
 $(document).ready(function()
 {

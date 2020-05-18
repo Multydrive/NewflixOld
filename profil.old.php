@@ -3,16 +3,18 @@ session_start();
 if (isset($_SESSION['pseudo']) )
  {
 
+
  ?>
 <!DOCTYPE html>
 <html lang = "fr">
 
 	<head>
 			<?php
-				// Infos communes a toutes les pages pour le head HTML
-        require_once('head.php');
-      ?>
+				// Infos communés a toutes les pages pour le head HTML
+               require_once('head.php');
+            ?>
 	</head>
+
 	<body>
 
 		   <?php
@@ -25,6 +27,7 @@ if (isset($_SESSION['pseudo']) )
           {
             require_once('connexion_user_lambda.php');
           }
+
           require_once('menu.php');
        ?>
 
@@ -40,36 +43,6 @@ if (isset($_SESSION['pseudo']) )
 			{
 		?>
 		<br>
-    <div id="main">
-    <?php
-    if ($_SESSION['pseudo']=='admin@heh.be')
-    {
-    ?>
-
-    <div id="navleft">
-      <a href="profil.php?c=1">PROFIL</a>
-      <a href="profil.php?c=2">CONTENU</a>
-      <a href="profil.php?c=4">UTILISATEURS</a>
-    </div>
-
-    <?php
-    }
-    else {
-     ?>
-
-   <div id="navleft">
-     <a href="profil.php?c=1">PROFIL</a>
-     <a href="profil.php?c=2">CONTENU</a>
-     <a href="profil.php?c=3">MESSAGES</a>
-   </div>
-
- <?php
-    }
-    if (isset($_GET['c']))
-		{
-			if ($_GET['c'] == 1)
-			{
-  ?>
 
 		<section class="Infos">
 				<?php
@@ -81,12 +54,14 @@ if (isset($_SESSION['pseudo']) )
 						echo $donnees['Prenom']." ".$donnees['Nom'] ;
 					?>
 				</h1>
+
         <div>
           <?php
             echo "<p> Membre depuis : ".$donnees['Inscrit_Depuis']."</p>" ;
            ?>
         </div>
 		</section>
+
     <section>
       <form class="mdp-profil" action="" method="post">
         <h2 class="box-title">Modifier mon mot de passe </h1>
@@ -95,95 +70,20 @@ if (isset($_SESSION['pseudo']) )
         <input type="submit" name="submit" value="Modifier" class="box-button" />
       </form>
     </section>
+
     <section>
       <form class="mdp-profil" action="" method="post">
         <h2 class="box-title">Supprimer mon compte </h1>
         <input type="password" class="mdp-input" name="password_de" placeholder="Mot de passe actuel"  required />
-        <input type="password" class="mdp-input" name="password_de2" placeholder="Confirmation du mot de passe actuel"  required />
+        <input type="password" class="mdp-input" name="password_de2" placeholder="Confirmation du mot de passe"  required />
         <input type="submit" name="submit" value="Supprimer" class="box-button" />
       </form>
     </section>
 
-    <?php
-      // Ferme acollade du prmier if
-      }
-      elseif ($_GET['c'] == 2)
-			{
-    ?>
-      <h2> TEST CONTENU </h2>
-
-    <?php
-      // Ferme acollade du deuxieme if
-      }
-      elseif ($_GET['c'] == 3)
-			{
-        if (isset($_REQUEST['objet'], $_REQUEST['corps'] ))
-        {
-          // Fonctions qui nettoye le résultat récupéré
-          function valid_donnees ($donnees)
-          {
-            $donnees = trim($donnees);
-            $donnees = stripslashes($donnees);
-            $donnees = htmlspecialchars($donnees);
-            return $donnees;
-          }
-          // récupére l'objet, le message et appelle la fct valid_donnees
-          $destination = "altino22@gmail.com";
-          $obj = valid_donnees ($_REQUEST['objet']) ;
-          $msg = valid_donnees($_REQUEST['corps']) ;
-          // Envoyer le mail à l'administrateur
-          mail($destination, $obj, $msg) ;
-          if (mail($destination, $obj, $msg))
-          {
-            header('Location:profil.php?c=1');
-          }
-          else
-          {
-            echo "<div class='sucess'>
-                    <h2>Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.</h2>
-                  </div>";
-          }
-        }
-        else
-        {
-          echo '<form class="mdp-profil" action="" method="post">
-            <h2 class="box-title">Envoyer un message à l\'administrateur :</h1>
-            <input type="textarea" class="mdp-input" name="objet" placeholder="Objet du message"  required />
-            <input type="textarea" class="mdp-input" name="corps" placeholder="Message"  required />
-            <input type="submit" name="submit" value="Envoyer" class="box-button" />
-          </form>';
-        }
-
-    ?>
-
-    <?php
-      // Ferme acollade du troisieme if
-      }
-      elseif ($_GET['c'] == 4)
-			{
-        if ($_SESSION['pseudo']=='admin@heh.be')
-        {
-          echo "<h2> TEST USERS </h2>" ;
-        }
-        else
-        {
-          echo "<div class='sucess'>
-  								 <h2>Vous n'avez pas l'autorisation d'accéder à cette page !</h2>
-  						 </div>";
-        }
-
-      }
-
-    // accolade du isset
-    }
-    ?>
-
 		<?php
-
 			// Ferme acollade du while
 			}
-
-      // ----------------------- MODIFICATION DU MOT DE PASSE ------------------------------
+      // MODIFICATION DU MOT DE PASSE
       if (isset($_REQUEST['password'], $_REQUEST['password2'] ))
       {
         $checkPassword = false ;
@@ -269,10 +169,7 @@ if (isset($_SESSION['pseudo']) )
    						</div>";
   			}
       }
-      ?>
-      </div>
 
-      <?php
 			$reponse->closeCursor();
 			require_once('footer.php');
 			echo '<script src="jquery-3.4.1.min.js"> </script>
@@ -283,6 +180,7 @@ if (isset($_SESSION['pseudo']) )
 			{
 				header('Location:login.php');
 			}
+
 		?>
 
 	</body>

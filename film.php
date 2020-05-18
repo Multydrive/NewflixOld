@@ -10,9 +10,9 @@ if (isset($_SESSION['pseudo']) )
 
 	<head>
 			<?php
-				// Infos communés a toutes les pages pour le head HTML
+				// Infos communes a toutes les pages pour le head HTML
                require_once('head.php');
-            ?>
+      ?>
 	</head>
 
 	<body>
