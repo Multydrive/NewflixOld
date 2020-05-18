@@ -25,9 +25,9 @@ font-family: "Helvetica Neu Bold"; src: url('fonts/Helvetica Neu Bold.ttf'); }
 #navtop img,#navbot img {min-width: 32px;}
 .logo {min-width:30px ; width:150px; }
 
-/* Navigation profil */
+/* Navigation page mon compte */
 #main,.profilVisible {display: flex; flex-grow: row nowrap;}
-#navleft { position:static; left:0; z-index:99;width: 200px ; background-color:#111; display:flex; flex-flow:column nowrap; justify-content:flex-start; align-items: center;}
+#navleft { position:static; left:0; z-index:99;width: 200px ; background-color:#111; display:flex; flex-flow:column nowrap; justify-content:flex-start;}
 #navleft a { color:white; font-family:Helvetica Neu Bold,Calibri,sans-serif; text-decoration:none; padding:0.6em; display:inline-block; font-size:20px;  }
 #navleft a:hover, #navleft a:focus { border-radius: 45px; color:red; background-color: black; transition-property: background-color ; background-color:#545458 ; transition-duration: 400ms;}
 
@@ -95,9 +95,9 @@ div h3 {margin-top: 5px; text-align: center; }
 
 /* Accueil acteurs */
 #acteur {display: flex; justify-content: flex-start;  margin: 0;  flex-wrap: wrap; flex-direction: row ; align-items: center;}
-#acteur span {order: 0; display: block; position:relative; top:0px; text-align: center; padding: 10px; font-size: 15px; }
+#acteur span {order: 0; display: block; position:relative; top:0px; text-align: center; padding: 10px 0; font-size: 15px; }
 #acteur img {order: 1; }
-.photoActeur {padding: 1%;}
+.photoActeur {padding: 20px;}
 #Acteurs {min-width: 170px; }
 
 /* Amélioration du responsive*/

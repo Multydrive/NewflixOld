@@ -3,7 +3,7 @@
 	- Rapport final !!!!!
 	- MODIFIER CODE PHP PAGE ACCUEIL/GENRE pour que ajoute nouvelle ligne à chaque nouveau genre ( FOREACH !!!!!!!!! )
 	- modif mdp , suppression compte ... FAIRE DES FONCTIONS POUR GET MDP, MAIL, ...
-	- flèche disparait/apprait pas au scroll 
+	- flèche disparait pas au scroll
 	- REFAIRE TABLEAU DE BORD MON COMPTE ( voir notes papiers )
 			- interface user loggué ( ajouter un film , des acteurs , des réalisateurs, ... ...)
 			- procédure ajout de films :
@@ -16,10 +16,9 @@
 					6) Ajouter id film et acteur dans filmo
 			- interface user admin ( ajotuer des films , voir ceux proposés et les annuler si convient pas , ...)
 	- isncritpion : reremplir tout le formulaire si erreur  ( mettre champ email en rouge) FORMULAIRE DOIT S'APPELER LUI MEME
-	- communication avec administrateur ?
 	- notification pour admin que films ajouté pour que puisse ajouter une photo
 	- FLECHE BACK TO TOP DANS ACTEURS MARCHE PAS ( copié/collé dans acteurs dans profil meme chose )
-	- page acteurs améliorer QUAND NOM ET PRENOM SUR DEUX LIGNES ET QUE SURVOLE IMAGE REPASSE SUR UNE LIGNE
+	- page acteurs améliorer CAR QUAND NOM ET PRENOM SUR DEUX LIGNES ET QUE SURVOLE IMAGE REPASSE SUR UNE LIGNE
 	- REQUETE SQL UNIFIEES !!!!!!
 	- METTRE UN MDP A ROOT POUR LA DB !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	- check si peut accéder sans session a toutes les pages
@@ -40,8 +39,6 @@
 		- mettre section dans un film : film similaire
 		- photos des acteurs avec leur nom sous les films ?
 		- champ commentaires sous les films  ( si pas le temps SUPPRIMER EN HTML ET CSS )
-
-
 
 
 

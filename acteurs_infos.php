@@ -3,7 +3,6 @@ session_start();
 if (isset($_SESSION['pseudo']) )
  {
 
-
  ?>
 <!DOCTYPE html>
 <html lang = "fr">
@@ -42,9 +41,6 @@ if (isset($_SESSION['pseudo']) )
 			{
 
 		?>
-
-
-
 
 		<br>
 
@@ -106,9 +102,7 @@ if (isset($_SESSION['pseudo']) )
 				header('Location:login.php');
 			}
 
-
 		?>
-
 
 	</body>
 

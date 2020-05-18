@@ -117,41 +117,48 @@ if (isset($_SESSION['pseudo']) )
       }
       elseif ($_GET['c'] == 3)
 			{
-        if (isset($_REQUEST['objet'], $_REQUEST['corps'] ))
+        if (!$_SESSION['pseudo']=='admin@heh.be')
         {
-          // Fonctions qui nettoye le résultat récupéré
-          function valid_donnees ($donnees)
+          if (isset($_REQUEST['objet'], $_REQUEST['corps'] ))
           {
-            $donnees = trim($donnees);
-            $donnees = stripslashes($donnees);
-            $donnees = htmlspecialchars($donnees);
-            return $donnees;
-          }
-          // récupére l'objet, le message et appelle la fct valid_donnees
-          $destination = "altino22@gmail.com";
-          $obj = valid_donnees ($_REQUEST['objet']) ;
-          $msg = valid_donnees($_REQUEST['corps']) ;
-          // Envoyer le mail à l'administrateur
-          mail($destination, $obj, $msg) ;
-          if (mail($destination, $obj, $msg))
-          {
-            header('Location:profil.php?c=1');
+            // Fonctions qui nettoye le résultat récupéré
+            function valid_donnees ($donnees)
+            {
+              $donnees = trim($donnees);
+              $donnees = stripslashes($donnees);
+              $donnees = htmlspecialchars($donnees);
+              return $donnees;
+            }
+            // récupére l'objet, le message et appelle la fct valid_donnees
+            $destination = "altino22@gmail.com";
+            $obj = valid_donnees ($_REQUEST['objet']) ;
+            $msg = valid_donnees($_REQUEST['corps']) ;
+            // Envoyer le mail à l'administrateur
+            mail($destination, $obj, $msg) ;
+            if (mail($destination, $obj, $msg))
+            {
+              header('Location:profil.php?c=1');
+            }
+            else
+            {
+              echo "<div class='sucess'>
+                      <h2>Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.</h2>
+                    </div>";
+            }
           }
           else
           {
-            echo "<div class='sucess'>
-                    <h2>Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.</h2>
-                  </div>";
+            echo '<form class="mdp-profil" action="" method="post">
+              <h2 class="box-title">Envoyer un message à l\'administrateur :</h1>
+              <input type="textarea" class="mdp-input" name="objet" placeholder="Objet du message"  required />
+              <input type="textarea" class="mdp-input" name="corps" placeholder="Message"  required />
+              <input type="submit" name="submit" value="Envoyer" class="box-button" />
+            </form>';
           }
         }
         else
         {
-          echo '<form class="mdp-profil" action="" method="post">
-            <h2 class="box-title">Envoyer un message à l\'administrateur :</h1>
-            <input type="textarea" class="mdp-input" name="objet" placeholder="Objet du message"  required />
-            <input type="textarea" class="mdp-input" name="corps" placeholder="Message"  required />
-            <input type="submit" name="submit" value="Envoyer" class="box-button" />
-          </form>';
+          header('Location:profil.php?c=1');
         }
 
     ?>
@@ -163,7 +170,28 @@ if (isset($_SESSION['pseudo']) )
 			{
         if ($_SESSION['pseudo']=='admin@heh.be')
         {
-          echo "<h2> TEST USERS </h2>" ;
+          // On récupère tout le contenu de la table users
+    			$reponse=$bd->prepare('SELECT * FROM users');
+    			$reponse->execute();
+
+          echo "<section class='Films_global'>";
+          echo "<div id='acteur'>";
+          // On affiche toutes les infos sur les utilisateurs
+          while ($donnees = $reponse->fetch())
+          {
+          echo "<div class='photoActeur'>";
+          echo '<div><span>'.$donnees['Adresse_mail'].'</span> </div>';
+					echo '<div><a href="users_infos.php?mail='.$donnees['Adresse_mail'].' "> <img src='.$donnees['Photo'].' width="120px" height="160px"
+					alt=" '.$donnees['Nom']." ".$donnees['Prenom'].' " title="'.$donnees['Nom']." ".$donnees['Prenom'].'" /></a></div></div>';
+				  ?>
+
+        <?php
+        }
+        ?>
+          </div>
+        </section>
+
+          <?php
         }
         else
         {
