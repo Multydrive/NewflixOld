@@ -11,6 +11,7 @@
    	<?php
        require_once('connexion_user_lambda.php');
        session_start();
+			 $_SESSION = array();
     ?>
 
     <nav id="navtop">

@@ -1,8 +1,11 @@
 - Fonctions à rajouter :
 	- MVC ?
 	- Rapport final !!!!!
+	- VEIRIFER QUE ENTRE QQCH :  MODIFIER MDP, SUPPRIMER COMPTE , AJOUTER COMPTE, .... sinon mettre en rouge formulaires
+	- VERIFIER MAIL A AROBASE 
 	- MODIFIER CODE PHP PAGE ACCUEIL/GENRE pour que ajoute nouvelle ligne à chaque nouveau genre ( FOREACH !!!!!!!!! )
 	- modif mdp , suppression compte ... FAIRE DES FONCTIONS POUR GET MDP, MAIL, ...
+	- messags à l'admin : LIMITER NBRE (stocké nbre envoyé en db et supprimer ce nombre après 24h)
 	- flèche disparait pas au scroll
 	- REFAIRE TABLEAU DE BORD MON COMPTE ( voir notes papiers )
 			- interface user loggué ( ajouter un film , des acteurs , des réalisateurs, ... ...)
@@ -24,6 +27,8 @@
 	- check si peut accéder sans session a toutes les pages
 	- plante si tente acccéder actuers_infos sans id acteur
 	- css trop chargé
+	- changer photo de profil et la mettre ) coté de mon compte
+
 
 - Bug :
 	- AJOUT DE FILMS PAS METTRE LES DEUX POINTS COLLE AVEC LE TITRE, SINON RECHERCHE MARCHE PAS
@@ -36,10 +41,10 @@
 
 - SI J'AI LE TEMPS :
 	 	- SI A LE TEMPS : catégorie populaire sur Newflix (incrémenter une variable JS ? PHP ?  si clique sur page et stocke cette valeur en db dans la table film)
+		- authentification à deux facteurs connexion ?
 		- mettre section dans un film : film similaire
 		- photos des acteurs avec leur nom sous les films ?
 		- champ commentaires sous les films  ( si pas le temps SUPPRIMER EN HTML ET CSS )
-
 
 
 AJOUT DB :

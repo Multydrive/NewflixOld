@@ -20,7 +20,7 @@ echo '
 </div>
 
 <!-- Back to top -->
-<img id="fleche_haut" src="img/arrow_top.png" class="disparition arrow" alt="flèche pour remonter en haut de la page">
+<img id="fleche_haut" src="img/arrow_top.png" class=" apparition" alt="flèche pour remonter en haut de la page">
 
  ' ;
 

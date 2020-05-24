@@ -107,19 +107,94 @@ if (isset($_SESSION['pseudo']) )
     <?php
       // Ferme acollade du prmier if
       }
+      // AJOUT CONTENU
       elseif ($_GET['c'] == 2)
 			{
     ?>
-      <h2> TEST CONTENU </h2>
+      <form class="box_sans_border" action="" method="post" >
+
+        <h2 class="box-title">Ajouter un film</h2>
+
+        <input type="text" class="box-input" name="name"
+        placeholder="Titre " value="<?php  if (isset($Titre)) {echo $Titre ;} ?>" required />
+
+        <input type="text" class="box-input" name="resume"
+        placeholder="Résumé" value="<?php if (isset($resume)) {echo $resume ;} ?>" required />
+
+        <input type="text" class="box-input" name="date_sortie"
+        placeholder="Date de sortie" value="<?php if (isset($date_sortie)) {echo $date_sortie ;} ?>"required />
+
+        <SELECT name="Réalisateur" size="1" class="box-input">
+          <option>REALISATEUR</option>
+          <?php
+          $req=$bd->prepare ("SELECT * FROM realisateurs");
+          $req->execute();
+
+          while ($result=$req->fetch(PDO::FETCH_OBJ) )
+          {
+            echo "<option>$result->Prenom $result->Nom</option>" ;
+          }
+          ?>
+        </SELECT>
+
+        <SELECT name="Serie_Films" size="1" class="box-input">
+          <option>UNIVERS CINEMATOGRAPHIQUE</option>
+          <?php
+          $req=$bd->prepare ("SELECT * FROM serie_de_films");
+          $req->execute();
+
+          while ($result=$req->fetch(PDO::FETCH_OBJ) )
+          {
+            echo "<option>$result->Description</option>" ;
+          }
+          ?>
+        </SELECT>
+
+        <SELECT name="Genre" size="1" class="box-input">
+          <option>GENRE</option>
+          <?php
+          $req=$bd->prepare ("SELECT * FROM genre");
+          $req->execute();
+
+          while ($result=$req->fetch(PDO::FETCH_OBJ) )
+          {
+            echo "<option>$result->Genre</option>" ;
+          }
+          ?>
+        </SELECT>
+
+        <SELECT name="Acteurs" size="1" class="box-input" multiple>
+          <option>ACTEURS</option>
+          <?php
+          $req=$bd->prepare ("SELECT * FROM acteurs");
+          $req->execute();
+
+          while ($result=$req->fetch(PDO::FETCH_OBJ) )
+          {
+            echo "<option>$result->Prenom $result->Nom</option>" ;
+          }
+          ?>
+        </SELECT>
+
+
+          <input type="submit" name="submit"
+        value="Ajouter" class="box-button" />
+
+      </form>
 
     <?php
       // Ferme acollade du deuxieme if
       }
+      // MESSAGE A L'ADMIN
       elseif ($_GET['c'] == 3)
 			{
-        if (!$_SESSION['pseudo']=='admin@heh.be')
+        if ($_SESSION['pseudo']=='admin@heh.be')
         {
-          if (isset($_REQUEST['objet'], $_REQUEST['corps'] ))
+          header('Location:profil.php?c=1');
+        }
+        else
+        {
+          if (isset($_POST['objet'], $_POST['corps'] ))
           {
             // Fonctions qui nettoye le résultat récupéré
             function valid_donnees ($donnees)
@@ -131,11 +206,11 @@ if (isset($_SESSION['pseudo']) )
             }
             // récupére l'objet, le message et appelle la fct valid_donnees
             $destination = "altino22@gmail.com";
-            $obj = valid_donnees ($_REQUEST['objet']) ;
-            $msg = valid_donnees($_REQUEST['corps']) ;
+            $obj = valid_donnees ($_POST['objet']) ;
+            $new_obj = 'Newflix | Nouveau message de : '.$_SESSION['pseudo'].' => '.$obj ;
+            $msg = valid_donnees($_POST['corps']) ;
             // Envoyer le mail à l'administrateur
-            mail($destination, $obj, $msg) ;
-            if (mail($destination, $obj, $msg))
+            if (mail($destination, $new_obj, $msg))
             {
               header('Location:profil.php?c=1');
             }
@@ -156,16 +231,13 @@ if (isset($_SESSION['pseudo']) )
             </form>';
           }
         }
-        else
-        {
-          header('Location:profil.php?c=1');
-        }
 
     ?>
 
     <?php
       // Ferme acollade du troisieme if
       }
+      // GESTION DES USERS
       elseif ($_GET['c'] == 4)
 			{
         if ($_SESSION['pseudo']=='admin@heh.be')
@@ -249,7 +321,7 @@ if (isset($_SESSION['pseudo']) )
   			}
       }
 
-      // SUPPRESION DE COMPTE
+      // ----------------------- SUPPRESION DE COMPTE ------------------------------
       if (isset($_REQUEST['password_de'], $_REQUEST['password_de2'] ))
       {
         $mail = $_SESSION['pseudo'];
@@ -298,6 +370,7 @@ if (isset($_SESSION['pseudo']) )
   			}
       }
       ?>
+      <!-- Fermeture de main -->
       </div>
 
       <?php

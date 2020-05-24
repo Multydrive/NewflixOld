@@ -14,8 +14,8 @@
 
     <nav id="navtop">
 			<a href="index.php"><img class="logo" src = "img/Logo_Newflix.png" alt = "Logo officiel du site"></a>
-			<a href="login.php" class="login" >Connexion</a>
-      <a href="inscription.php">Inscription</a>
+			<a href="login.php" class="login a_menu" >Connexion</a>
+      <a href="inscription.php" class="a_menu">Inscription</a>
 		</nav>
 
 		<div id="txtOk" height="120px"></div>
@@ -94,21 +94,21 @@
 			elseif ($checkMail == true and $checkPassword == false and !empty($email) and !empty($mdp) and !empty($mdp2))
 			{
 				echo "<div class='sucess'>
- 								<h3>ATTENTION : Les deux mots de passes ne correspondent pas !</h3>
+ 								<h3>ERREUR : Les deux mots de passes ne correspondent pas !</h3>
  								<p><a href='inscription.php'>Cliquez ici pour recommencer</a></p>
  						</div>";
 			}
 			elseif ($checkMail == false and $checkPassword == true and !empty($email) and !empty($mdp) and !empty($mdp2))
 			{
 				echo "<div class='sucess'>
- 								<h3>ATTENTION : Un compte est déjà lié à cet e-mail !</h3>
+ 								<h3>ERREUR : Un compte est déjà lié à cet e-mail !</h3>
  								<p><a href='inscription.php'>Cliquez ici pour recommencer</a></p>
  						</div>";
 			}
 			elseif ($checkMail == false and $checkPassword == false and !empty($email) and !empty($mdp) and !empty($mdp2))
 			{
 				echo "<div class='sucess'>
- 								<h3>ATTENTION : Les deux mots de passes ne correspondent pas et un compte est déjà lié à cet e-mail !</h3>
+ 								<h3>ERREUR : Les deux mots de passes ne correspondent pas et un compte est déjà lié à cet e-mail !</h3>
  								<p><a href='inscription.php'>Cliquez ici pour recommencer</a></p>
  						</div>";
 			}

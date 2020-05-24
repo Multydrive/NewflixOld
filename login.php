@@ -14,8 +14,8 @@
 
     <nav id="navtop">
 			<a href="index.php"><img class="logo" src = "img/Logo_Newflix.png" alt = "Logo officiel du site"></a>
-			<a href="login.php" class="login" >Connexion</a>
-      <a href="inscription.php">Inscription</a>
+			<a href="login.php" class="login a_menu" >Connexion</a>
+      <a href="inscription.php" class="a_menu" >Inscription</a>
 		</nav>
 
 		<div id="txtOk" height="120px"></div>
