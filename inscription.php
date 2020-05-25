@@ -137,8 +137,7 @@
 				  <input type="password" class="box-input" name="password2"
 				  placeholder="Confirmation du mot de passe" value="<?php if (isset($mdp2)) {echo $mdp2 ;} ?>" required />
 
-				    <input type="submit" name="submit"
-				  value="S'inscrire" class="box-button" />
+				    <input type="submit" name="submit" value="S'inscrire" class="box-button" />
 
 				    <p class="box-register">Déjà inscrit?
 				  <a href="login.php">Connectez-vous.</a></p>

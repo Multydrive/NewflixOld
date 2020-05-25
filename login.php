@@ -109,8 +109,7 @@
 			    <input type="password" class="box-input" name="password"
 			  placeholder="Mot de passe"  required />
 
-			    <input type="submit" name="submit"
-			  value="Se connecter" class="box-button" />
+			    <input type="submit" name="submit" value="Se connecter" class="box-button" />
 
 			    <p class="box-register">Première visite sur Newflix ?
 				  <a href="inscription.php">Inscrivez-vous.</a></p>

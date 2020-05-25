@@ -116,7 +116,7 @@ if (isset($_SESSION['pseudo']) )
         <h2 class="box-title">Ajouter un film</h2>
 
         <input type="text" class="box-input" name="name"
-        placeholder="Titre " value="<?php  if (isset($Titre)) {echo $Titre ;} ?>" required />
+        placeholder="Titre" value="<?php  if (isset($Titre)) {echo $Titre ;} ?>" required />
 
         <input type="text" class="box-input" name="resume"
         placeholder="Résumé" value="<?php if (isset($resume)) {echo $resume ;} ?>" required />
@@ -226,7 +226,7 @@ if (isset($_SESSION['pseudo']) )
             echo '<form class="mdp-profil" action="" method="post">
               <h2 class="box-title">Envoyer un message à l\'administrateur :</h1>
               <input type="textarea" class="mdp-input" name="objet" placeholder="Objet du message"  required />
-              <input type="textarea" class="mdp-input" name="corps" placeholder="Message"  required />
+              <textarea id="corps_msg" name="corps" rows="5" class="box-input" placeholder="Message" cols="40"></textarea>
               <input type="submit" name="submit" value="Envoyer" class="box-button" />
             </form>';
           }
