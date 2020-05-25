@@ -13,7 +13,7 @@ echo '
 						<button type="submit" ></button>
         </form>
 	<a href="profil.php?c=1" class="a_menu">Mon compte </a>
-	<a href="logout.php" class="a_menu">Déconnexion</a>
+	<a href="login.php?logout=1" class="a_menu">Déconnexion</a>
 </nav>
 
 <div id="txtOk">

@@ -1,8 +1,8 @@
 - Fonctions à rajouter :
 	- MVC ?
 	- Rapport final !!!!!
-	- strlen() pour limiter taille champs
-	- code intégration doit expliquer comment faire à l'user ajoute un film
+	- strlen() pour limiter taille TOUT champs
+	- QUAND AJOUTE FILM,REAL, ... RETIRER ESPACES !!!!!!!!!!!!!!!!!!!!!!
 	- MODIFIER CODE PHP PAGE ACCUEIL/GENRE pour que ajoute nouvelle ligne à chaque nouveau genre ( FOREACH !!!!!!!!! )
 	- modif mdp , suppression compte ... FAIRE DES FONCTIONS POUR GET MDP, MAIL, ...
 	- messags à l'admin : LIMITER NBRE (stocké nbre envoyé en db et supprimer ce nombre après 24h)

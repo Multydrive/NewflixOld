@@ -160,16 +160,12 @@ if (isset($_SESSION['pseudo']) )
 									    setInterval(Move,7500); //change img toutes les 7,5 sec
 									}
 									</script> ' ;
-
-
 					}
 					else
 					{
 						header('Location:login.php');
 					}
-
         ?>
-
 
 	</body>
 </html>

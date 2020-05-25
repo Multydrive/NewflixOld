@@ -182,8 +182,6 @@ if (isset($_SESSION['pseudo']) && $_SESSION['pseudo']=='admin@heh.be' )
       <?php
 
 			require_once('footer.php');
-			echo '<script src="jquery-3.4.1.min.js"> </script>
-						<script src="newflix.js"></script>' ;
 			}
 			else
 			{
@@ -191,8 +189,6 @@ if (isset($_SESSION['pseudo']) && $_SESSION['pseudo']=='admin@heh.be' )
 			}
 
 		?>
-    <!-- Fermeture de main -->
-    </div>
 
 	</body>
 </html>

@@ -111,76 +111,7 @@ if (isset($_SESSION['pseudo']) )
       elseif ($_GET['c'] == 2)
 			{
     ?>
-      <form class="box_sans_border" action="" method="post" >
-
-        <h2 class="box-title">Ajouter un film</h2>
-
-        <input type="text" class="box-input" name="name"
-        placeholder="Titre" value="<?php  if (isset($Titre)) {echo $Titre ;} ?>" required />
-
-        <input type="text" class="box-input" name="resume"
-        placeholder="Résumé" value="<?php if (isset($resume)) {echo $resume ;} ?>" required />
-
-        <input type="text" class="box-input" name="date_sortie"
-        placeholder="Date de sortie" value="<?php if (isset($date_sortie)) {echo $date_sortie ;} ?>"required />
-
-        <SELECT name="Réalisateur" size="1" class="box-input">
-          <option>REALISATEUR</option>
-          <?php
-          $req=$bd->prepare ("SELECT * FROM realisateurs");
-          $req->execute();
-
-          while ($result=$req->fetch(PDO::FETCH_OBJ) )
-          {
-            echo "<option>$result->Prenom $result->Nom</option>" ;
-          }
-          ?>
-        </SELECT>
-
-        <SELECT name="Serie_Films" size="1" class="box-input">
-          <option>UNIVERS CINEMATOGRAPHIQUE</option>
-          <?php
-          $req=$bd->prepare ("SELECT * FROM serie_de_films");
-          $req->execute();
-
-          while ($result=$req->fetch(PDO::FETCH_OBJ) )
-          {
-            echo "<option>$result->Description</option>" ;
-          }
-          ?>
-        </SELECT>
-
-        <SELECT name="Genre" size="1" class="box-input">
-          <option>GENRE</option>
-          <?php
-          $req=$bd->prepare ("SELECT * FROM genre");
-          $req->execute();
-
-          while ($result=$req->fetch(PDO::FETCH_OBJ) )
-          {
-            echo "<option>$result->Genre</option>" ;
-          }
-          ?>
-        </SELECT>
-
-        <SELECT name="Acteurs" size="1" class="box-input" multiple>
-          <option>ACTEURS</option>
-          <?php
-          $req=$bd->prepare ("SELECT * FROM acteurs");
-          $req->execute();
-
-          while ($result=$req->fetch(PDO::FETCH_OBJ) )
-          {
-            echo "<option>$result->Prenom $result->Nom</option>" ;
-          }
-          ?>
-        </SELECT>
-
-
-          <input type="submit" name="submit"
-        value="Ajouter" class="box-button" />
-
-      </form>
+      
 
     <?php
       // Ferme acollade du deuxieme if
@@ -376,8 +307,6 @@ if (isset($_SESSION['pseudo']) )
       <?php
 			$reponse->closeCursor();
 			require_once('footer.php');
-			echo '<script src="jquery-3.4.1.min.js"> </script>
-						<script src="newflix.js"></script>' ;
 
 			} // Si pas de var de session, formulaire de login
 			else

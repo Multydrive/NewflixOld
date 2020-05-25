@@ -3,6 +3,7 @@
 	<head>
 		<?php
        require_once('head.php');
+			 session_start();
     ?>
 	</head>
 
@@ -126,6 +127,19 @@
 						 </div>";
 			}
 		}
+
+		if (isset($_GET['logout']))
+		{
+			if ($_GET['logout'] == 1)
+			{
+				session_destroy();
+				echo "<div class='sucess'>
+								<h3>Déconnexion réussie !</h3>
+								<p><a href='login.php'>Cliquez ici pour vous reconnecter</a></p>
+							</div>";
+			}
+		}
+
 
 		require_once('footer.php');
 	?>
